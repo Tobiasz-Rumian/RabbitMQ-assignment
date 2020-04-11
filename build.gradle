@@ -46,5 +46,9 @@ subprojects{
 dependencies {
     implementation project('logger')
     implementation project('car')
+    implementation project('driver')
+    implementation project('engineer')
+    implementation project('teamleader')
+    implementation project('monitor')
 }
 
