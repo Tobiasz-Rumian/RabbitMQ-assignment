@@ -1,2 +1,3 @@
 rootProject.name = 'SRI_3'
 include 'car'
+include 'logger'
