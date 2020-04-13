@@ -7,7 +7,7 @@ plugins {
 }
 
 application {
-    mainClassName = 'car.CarApplication'
+    mainClassName = 'Main'
 }
 
 group = 'com.example'
@@ -44,11 +44,17 @@ subprojects{
     apply plugin: 'idea'
 }
 dependencies {
-    implementation project('logger')
-    implementation project('car')
-    implementation project('driver')
-    implementation project('engineer')
-    implementation project('teamleader')
-    implementation project('monitor')
+    implementation 'org.springframework.boot:spring-boot-starter-amqp'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+    annotationProcessor 'org.projectlombok:lombok'
+    implementation project(':logger')
+    implementation project(':car')
+    implementation project(':driver')
+    implementation project(':engineer')
+    implementation project(':teamleader')
+    implementation project(':monitor')
 }
 
