@@ -28,6 +28,8 @@ allprojects {
     }
 
 }
+mainClassName = 'com.example.car.CarApplication'
+
 bootRun {
     if (project.hasProperty('args')) {
         args project.args.split(',')
@@ -35,11 +37,9 @@ bootRun {
             switch (project.args) {
                 case "Car":
                     mainClassName = 'com.example.car.CarApplication'
-                    applicationDefaultJvmArgs = ['-Drun.arguments="--server.port=8081"']
                     break
                 case "Logger":
                     mainClassName = 'com.example.logger.LoggerApplication'
-                    applicationDefaultJvmArgs = ['-Drun.arguments="--server.port=8082"']
                     break
             }
         }
@@ -79,5 +79,6 @@ dependencies {
     implementation project('engineer')
     implementation project('teamleader')
     implementation project('monitor')
+    implementation project('commons')
 }
 

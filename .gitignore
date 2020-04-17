@@ -30,3 +30,8 @@ out/
 
 ### VS Code ###
 .vscode/
+LOGGER.txt
+driver/gradle/
+engineer/gradle/
+monitor/gradle/
+teamleader/gradle/
