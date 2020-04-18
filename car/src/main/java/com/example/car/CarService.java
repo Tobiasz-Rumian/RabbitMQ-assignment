@@ -9,7 +9,7 @@ import java.util.Random;
 @Service
 public class CarService {
 
-    private Random randomGenerator = new Random();
+    private final Random randomGenerator = new Random();
 
     public CarParameters getCarParameters() {
         return CarParameters.of(

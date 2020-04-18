@@ -13,12 +13,12 @@ public class LoggerConfiguration {
     }
 
     @Bean
-    public FanoutExchange fanoutExchange(){
-        return new FanoutExchange("tut.fanout");
+    public FanoutExchange fanoutExchange() {
+        return new FanoutExchange("sri.pitStop");
     }
 
     @Bean
-    public Binding binding(FanoutExchange fanoutExchange,Queue anonymousQueue){
+    public Binding binding(FanoutExchange fanoutExchange, Queue anonymousQueue) {
         return BindingBuilder.bind(anonymousQueue).to(fanoutExchange);
     }
 }

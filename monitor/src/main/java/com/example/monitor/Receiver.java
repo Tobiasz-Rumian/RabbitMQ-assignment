@@ -13,10 +13,11 @@ import org.springframework.stereotype.Component;
 public class Receiver {
     private final ObjectMapper objectMapper;
     private final MonitorService monitorService;
+
     @RabbitListener(queues = "#{anonymousQueue.name}")
     public void receive(String in) throws JsonProcessingException {
-        CarParameters carParameters = objectMapper.readValue(in,CarParameters.class);
-        monitorService.checkAndRouteCarInfo(carParameters);
+        CarParameters carParameters = objectMapper.readValue(in, CarParameters.class);
         System.out.println(" [x] Received '" + in + "'");
+        monitorService.checkAndRouteCarInfo(carParameters);
     }
 }

@@ -13,17 +13,17 @@ public class MonitorConfiguration {
     }
 
     @Bean
-    public FanoutExchange fanoutExchange(){
-        return new FanoutExchange("tut.fanout");
+    public FanoutExchange fanoutExchange() {
+        return new FanoutExchange("sri.pitStop");
     }
 
     @Bean
-    public DirectExchange directExchange(){
-        return new DirectExchange("tut.direct");
+    public DirectExchange directExchange() {
+        return new DirectExchange("sri.warnings");
     }
 
     @Bean
-    public Binding binding(FanoutExchange fanoutExchange,Queue anonymousQueue){
+    public Binding binding(FanoutExchange fanoutExchange, Queue anonymousQueue) {
         return BindingBuilder.bind(anonymousQueue).to(fanoutExchange);
     }
 }

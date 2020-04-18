@@ -1,11 +1,11 @@
-package com.example.engineer.config;
+package com.example.teamleader.config;
 
 import org.springframework.amqp.core.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class EngineerConfiguration {
+public class TeamLeaderConfiguration {
 
     @Bean
     public Queue anonymousQueue() {
@@ -14,11 +14,11 @@ public class EngineerConfiguration {
 
     @Bean
     public DirectExchange directExchange() {
-        return new DirectExchange("sri.warnings");
+        return new DirectExchange("sri.teamLeader");
     }
 
     @Bean
-    public Binding binding(DirectExchange direct, Queue anonymousQueue) {
-        return BindingBuilder.bind(anonymousQueue).to(direct).with("Engineer");
+    public Binding binding(DirectExchange direct, Queue queue) {
+        return BindingBuilder.bind(queue).to(direct).with("teamLeader");
     }
 }

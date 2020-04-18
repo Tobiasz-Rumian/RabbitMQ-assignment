@@ -50,6 +50,9 @@ bootRun {
                 case "Engineer":
                     mainClassName = 'com.example.engineer.EngineerApplication'
                     break
+                case "TeamLeader":
+                    mainClassName = 'com.example.teamleader.TeamLeaderApplication'
+                    break
             }
         }
         println(project.args.toString())

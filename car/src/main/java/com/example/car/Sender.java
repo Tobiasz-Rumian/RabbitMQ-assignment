@@ -16,10 +16,10 @@ public class Sender {
     private final ObjectMapper objectMapper;
     private final FanoutExchange fanoutExchange;
 
-    @Scheduled(fixedDelay = 1000)
+    @Scheduled(fixedDelay = 15000)
     public void send() throws JsonProcessingException {
         String carParametersJson = objectMapper.writeValueAsString(carService.getCarParameters());
         template.convertAndSend(fanoutExchange.getName(), "", carParametersJson);
-        System.out.println(" [x] Sent '" + carParametersJson + "'");
+        System.out.println("Sent '" + carParametersJson + "'");
     }
 }
