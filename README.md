@@ -2,6 +2,8 @@ Do poprawnego działania aplikacji wymagane jest zainstalowanie RabbitMQ.
 Instrukcję instalacji można znaleźć pod adresem: 
 https://www.rabbitmq.com/download.html
 
+Aplikacja wymaga również JDK w wersji >=14 oraz Gradle w wersji >=6.3
+
 Przed uruchomieniem aplikacji należy zbudować aplikację poleceniem:
 
 `gradle build`
