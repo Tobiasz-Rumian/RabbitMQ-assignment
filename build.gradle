@@ -41,6 +41,15 @@ bootRun {
                 case "Logger":
                     mainClassName = 'com.example.logger.LoggerApplication'
                     break
+                case "Monitor":
+                    mainClassName = 'com.example.monitor.MonitorApplication'
+                    break
+                case "Driver":
+                    mainClassName = 'com.example.driver.DriverApplication'
+                    break
+                case "Engineer":
+                    mainClassName = 'com.example.engineer.EngineerApplication'
+                    break
             }
         }
         println(project.args.toString())

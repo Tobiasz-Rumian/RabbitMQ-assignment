@@ -21,15 +21,15 @@ public class CarService {
     }
 
     private double getEngineTemperature() {
-        return randomGenerator.nextDouble();
+        return 90 + (150 - 90) * randomGenerator.nextDouble();
     }
 
     private double getTirePressure() {
-        return randomGenerator.nextDouble();
+        return 0.9 + (1.4 - 0.9) * randomGenerator.nextDouble();
     }
 
     private double getOilPressure() {
-        return randomGenerator.nextDouble();
+        return 680 + (920 - 680) * randomGenerator.nextDouble();
     }
 
     private ZonedDateTime getCurrentTime() {

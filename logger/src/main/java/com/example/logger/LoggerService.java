@@ -16,6 +16,6 @@ public class LoggerService {
     private final Path file = Paths.get(FILE_NAME);
 
     public void writeToFile(String string) throws IOException {
-        Files.write(file, List.of(string), StandardCharsets.UTF_8, StandardOpenOption.APPEND);
+        Files.write(file, List.of(string), StandardCharsets.UTF_8, StandardOpenOption.APPEND,StandardOpenOption.CREATE);
     }
 }
